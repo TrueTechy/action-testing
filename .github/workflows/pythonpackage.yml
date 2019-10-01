@@ -15,6 +15,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install Kodi v18
       run: |
+        sudo apt update
         sudo apt install kodi
         
     - name: Set up Python ${{ matrix.python-version }}
