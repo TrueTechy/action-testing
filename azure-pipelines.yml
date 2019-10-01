@@ -25,13 +25,17 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- script: |
-    sudo apt update
-    sudo apt install kodi
-    cat ~/.kodi/temp/kodi.log | grep version
-  displayName: Install Kodi
 
 #- script: |
 #    pip install pytest pytest-azurepipelines
 #    pytest
 #  displayName: 'pytest'
+
+- script: |
+    sudo apt update
+    sudo apt install kodi
+    kodi &
+#Do all the kodi shit
+#Install addon, configure, playback, etc
+    cat ~/.kodi/temp/kodi.log | grep version
+  displayName: Install Kodi
