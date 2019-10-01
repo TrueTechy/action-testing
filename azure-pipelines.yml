@@ -37,5 +37,6 @@ steps:
     sudo apt update
     sudo apt install kodi
     kodi &
+    sleep 10
     cat ~/.kodi/temp/kodi.log | grep version
   displayName: Install Kodi
