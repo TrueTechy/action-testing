@@ -31,11 +31,11 @@ steps:
 #    pytest
 #  displayName: 'pytest'
 
+#Add do all the kodi shit
+#Install addon, configure, playback, etc
 - script: |
     sudo apt update
     sudo apt install kodi
     kodi &
-#Do all the kodi shit
-#Install addon, configure, playback, etc
     cat ~/.kodi/temp/kodi.log | grep version
   displayName: Install Kodi
